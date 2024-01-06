@@ -2,9 +2,9 @@ import React, { useState, useRef } from "react";
 
 import axios from "axios";
 
-import People from "./Assets/people.svg"
-import Arrow from "./Assets/Arrow.svg"
-import Trash from "./Assets/trash.svg"
+import People from "./Assets/people.svg";
+import Arrow from "./Assets/Arrow.svg";
+import Trash from "./Assets/trash.svg";
 
 
 import { Container, H1, Image, ContainerItens, InputLabel, Input, Button, User } from "./styles";
@@ -18,7 +18,8 @@ function App() {
   async function addNewUser() {
 
     const data = await axios.post("http://localhost:3001/users", {
-      name: inputName.current.value, age: inputAge.current.value
+      name: inputName.current.value, 
+      age: inputAge.current.value
     })
 
     console.log(data)
