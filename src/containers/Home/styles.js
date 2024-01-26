@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import Background from "../../Assets/background1.svg" //Precisamos importar a imagem que consta na pasta (Assets).
 
 export const Container = styled.div` 
@@ -18,28 +19,8 @@ margin-top: 30px;
 
 `;
 
-export const ContainerItens = styled.div` 
-border-radius: 61px 61px 0px 0px;
-background: linear-gradient(157deg, rgba(255, 255, 255, 0.60) 0.84%, rgba(255, 255, 255, 0.60) 0.85%, rgba(255, 255, 255, 0.15) 100%);
-padding: 50px 36px;
 
-display: flex;
-    flex-direction: column;
 
-    height: 100vh;
-
-`;
-
-export const H1 = styled.h1`
-margin-bottom: 80px;
-color: #FFF;
-text-align: center;
-font-size: 34px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-
-`;
 
 export const InputLabel = styled.p`
 color: #EEE;
@@ -72,38 +53,5 @@ line-height: 28px;
 color: #FFF;
 
 `;
-export const Button = styled.button`
-border-radius: 14px;
-background: var(--templates-5-color-1, rgba(0, 0, 0, 0.80));
-width: 342px;
-height: 74px;
-margin-top: 132px;
 
-border: none;
-color: #FFF;
-
-
-font-size: 17px;
-font-style: normal;
-font-weight: 700;
-line-height: 28px; 
-
-cursor: pointer;
-
-display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    
-&:hover{
-opacity: 0.8;
-
-}
-
-&:active {
-opacity: 0.5;
-
-}
-
-`;
 

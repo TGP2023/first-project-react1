@@ -1,25 +1,32 @@
 import React, { useState, useEffect } from "react";
 
+import { useNavigate } from 'react-router-dom';
+
 import axios from "axios";
 
 import Avatar from "../../Assets/avatar.svg";
 import Arrow from "../../Assets/Arrow.svg";
 import Trash from "../../Assets/trash.svg";
 
+import  H1  from "../../components/Title";
+import ContainerItens from "../../components/ContainerItens";
+import Button from "../../components/Button";
+
 
 import {
-Container,
-H1,
-Image,
-ContainerItens,
-Button,
-User,
+  Container,
+  Image,
+  User,
 } from "./styles";
 
 
 
 function Users() {
-  const [users, setUsers] = useState([]);  //Este é o React Hooks / Estado no React = > Ferramenta auxiliar.
+  const [users, setUsers] = useState([]);
+  const navigate = useNavigate();
+
+
+  //Este é o React Hooks / Estado no React = > Ferramenta auxiliar.
 
 
 
@@ -46,15 +53,22 @@ function Users() {
 
     const newUsers = users.filter(user => user.id !== userId);
     setUsers(newUsers);
+
+  }
+
+  function goBackPage() {
+    navigate('/')
+
+
   }
 
 
   return (
     <Container>
       <Image alt="logo-imagem" src={Avatar} />
-      <ContainerItens>
+      <ContainerItens isBlur={true}>
         <H1>Usuários!</H1>
-      
+
 
 
         <ul>
@@ -68,9 +82,8 @@ function Users() {
           ))}
         </ul>
 
-        
-        <Button>
-        <img alt="seta" src={Arrow} /> Voltar
+
+        <Button isBack={true}onClick={goBackPage} ><img alt="seta" src={Arrow} /> Voltar
         </Button>
 
       </ContainerItens>
